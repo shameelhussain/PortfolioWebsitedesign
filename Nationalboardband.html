@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <title>NBB Website</title> 
+    <style>
+      #scrollToTop{
+        color:#fff;
+        padding:10px;
+        position:fixed;
+        bottom:10px;
+        left:10px;
+        cursor:pointer;
+      }
+    </style>
+</head>
+<body>
+   <!--Navbar-->
+      <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <!-- Logo or brand -->
+                 <img class="h-16 inline rounded-2xl "  src="national.png">
+                <a href="#" class="text-white text-xl font-bold">NationalBroadBand</a>
+              </div>
+              <div class="hidden md:block">
+                <!-- Navigation links -->
+                <div class="ml-10 flex items-baseline space-x-4">
+                  <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                  <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                  <a href="Multi1.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Why NBB</a>
+                  <a href="NBBcode.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">NBB Code</a>
+                  <a href="Accordion.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">FAQS</a>
+                  <a href="Contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ">Contacts</a>
+                 <a href="drodown.html"><button class="bg-red-400 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">GETNBB</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+              <!-- Mobile menu button -->
+              <button type="button" id="mobile-menu-button" class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                <span class="sr-only">Open main menu</span>
+                <!-- Hamburger icon -->
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <!-- Close icon -->
+                <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile menu -->
+        <div class="md:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+            <a href="Multi1.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">WhyNBB</a>
+            <a href="NBBcode.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">NBB Code</a>
+            <a href="Accordion.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">FAQS</a>
+            <a href="Contact.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacts</a>
+          </div>
+        </div>
+      </nav>
+    
+      <hr class="bg-red-500">
+    <!-- Home Start-->
+    
+      
+    <!-- Implement the carousel -->
+    <div class="relative w-[600px]  mx-auto">
+      <div class="slide relative">
+          <img class="w-full h-full object-cover"
+              src="strong.jpg">
+          <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Flower One Caption</div>
+      </div>
+
+      <div class="slide relative">
+          <img class="w-[90vh] h-[50vh]  object-cover"
+              src="pakistanfb.jpg">
+          <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Flower Two Caption</div>
+      </div>  
+      </div>
+      <div class="slide relative">
+        <img class="w-full h-full object-cover"
+            src="Nbbfb.jpg">
+        <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">Flower three captions</div>
+    </div>
+        
+    </div>
+
+      <!-- The previous button -->
+      <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+          onclick="moveSlide(-1)">❮</a>
+
+      <!-- The next button -->
+      <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+          onclick="moveSlide(1)">❯</a>
+
+  </div>
+  <br>
+
+  <!-- The dots -->
+  <div class="flex justify-center items-center space-x-5">
+      <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(1)"></div>
+      <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(2)"></div>
+      <div class="dot w-4 h-4 rounded-full cursor-pointer" onclick="currentSlide(3)"></div>
+  </div>
+    <!--About Us--->
+    <div class="bg-green-500">
+    <h1 class="mx-20 px-48 ml-48 font-bold text-4xl text-red-700 hover:text-white text-center">About Us</h1>
+    
+    </div>
+
+
+    <div class="bg-green-500 text-slate-800 text-2xl text-center font-bold">
+        <h1 class="hover:text-white text-6xl cursor-pointer">Our network is Robust and Blazing fast</h1>
+        <div class="relative  w-[1200px] overflow-hidden left-[45px]">
+            <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer">
+            
+            <div class="bg-slate-500 h-full w-full  flex items-center">
+                
+               <h2 class="text-lg font-semibold text-white text-center mx-2 ml-96">
+                Click 
+               </h2>
+            </div>
+            <!--Arrow sign-->
+            <div class="absolute top-3 right-3 text-white transform duration-500 rotate-0 peer-checked:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>              
+            </div>
+            <!--Content-->
+            <div class="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
+              <div class="p-2  py-10 font-thin">
+                  <p > National Broadband (NBB) is an Internet Service Provider, which was created in response to the market demand for a focused service and a competitive alternative to traditional ISPs. As an end user, you can benefit from our consistent internet services through our assigned National Broadband dealersWe’ve invested heavily in our cutting edge infrastructure to ensure to be everyone’s preferred choice. As a partner, you can directly connect to our resilient buried fiber network for redistribution of internet connection to end users.
+                  National Broadband is powered by CYBERNET, Pakistan’s leading Internet, Data and managed services provider. Since its inception in March 1996, CYBERNET has extended its operations to 70 cities of Pakistan. It has a robust buried fiber infrastructure which CYBERNET has extended its operations to 70 cities of Pakistan. It has a robust buried fiber infrastructure which ensures uninterrupted services to all its customers. CYBERNET has maintained the tradition of dedication and service par excellence, which has been, and continues to be, its motto.</p>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+
+        
+    <!--WHY NBB-->
+    <div class="font-sans text-4xl bg-green-500   hover:bg-white text-center">
+       <li><a href="Multi1.html">Why National Broadband</a></li> 
+    </div>
+    <br>
+    <!---NBB CODE-->
+
+    <nav class="bg-green-500">
+        <li><a>
+            <section id="home" class="relative">
+            </section>
+            <section  id="features"  >
+                    <div class="container py-2">
+                      <div class="text-center m-auto mb-20 md:w-1/2">
+                        <h1 class="bg-red-500 text-blue-600 font-bold text-2xl hover:text-yellow-400 cursor-pointer border-4 px-12">NBB Code</h1>
+                      </div>
+                      <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
+                             <!--Cardno1-->
+                       <div class="  bg-green-500   text-center py-12 px-2 rounded-2xl
+                       cursor-pointer  ease-in duration-200">
+                        <div class="font-bold">
+                            <img class="w-18" src="fiber.jpg">
+                            <h3 class="hover:text-white text-slate-600">Buried Fiber Backbone</h3>
+                       <p class="text-slate-600 hover:text-whit">buried fiber optic using the FTTN and HFE technology</p>
+                       </div>   
+                       </div>
+                       <div class=" bg-green-500 text-center py-20 px-4 rounded-2xl cursor-pointer
+                         ease-in duration-200">
+                         <div class="font-bold">
+                         <img class="w-18" src="node.jpg">
+                         <h3 class="hover:text-white text-slate-600">Fiber To The Node</h3>
+                         <p class="text-slate-600 hover:text-white">Ethernet from the cable company</p>
+                         </div>
+                       </div> 
+                       
+                       <div class=" bg-green-500 bo text-center py-20 px-4 rounded-2xl cursor-pointer
+                         ease-in duration-200">
+                         <div class="font-bold">
+                            <img class="w-18" src="hybrid.png">
+                            <h3 class="hover:text-white text-slate-600">Hybrid Fiber Ethernet</h3>
+                            <p class="text-slate-600 hover:text-white">National Broadband also uses a Hybrid Fiber Ethernet (HFE) network, a telecommunication technology</p>
+                         </div>
+                       </div>
+                       <div class=" bg-green-500 text-center py-20 px-4 rounded-2xl cursor-pointer
+                        ease-in duration-200">
+                        <div class="font-bold">
+                        <img  class="w-18"src="art.jpg">
+                        <h3 class="hover:text-white text-slate-600">State Of The Art Infrastructure</h3>
+                        <p class=" text-slate-600 hover:text-white">National Broadband has an access to redundant submarine communication cables system..</p>
+                        </div>
+                       </div> 
+                       <div class=" bg-green-500 text-center py-20 px-4 rounded-2xl cursor-pointer
+                        ease-in duration-200 ">
+                       <div class="font-bold">
+                         <img class="w-[45vh]"src="submarine.jpg">
+                         <h3 class="hover:text-white text-slate-600">Redundant Upstream Carrier</h3>
+                         <p class="text-slate-600 hover:text-white">National Broadband has an access to redundant submarine communication cables system.</p>
+                       </div>
+
+                       </div> 
+                       <br>
+                      </div>
+                    </div>
+            </section>
+        </a></li>
+    </nav>
+    <!--- FAQs-->
+    
+    <Menu class="p-46 h-screen bg-green-800  text-slate-500">
+        <div class="relative  w-[1200px] overflow-hidden left-[50px]">
+          <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer">
+          <h1 class="font-bold text-4xl mx-12 text-center">FAQs</h1>
+          <div class="bg-slate-500 h-12 w-full  flex items-center">
+              
+             <h2 class="text-lg font-semibold text-white mx-2">
+              What is National Broadband?
+             </h2>
+          </div>
+          <!--Arrow sign-->
+          <div class="absolute top-3 right-3 text-white transform duration-500 rotate-0 peer-checked:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>              
+          </div>
+          <!--Content-->
+          <div class="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
+            <div class="p-4">
+                <p>National Broadband is an Internet Service Provider that uses FTTN and Ethernet as the method of delivery to home users.
+                   NBB provides internet services to its operators over its buried fiber backbone.</p>
+            </div>
+          </div>
+        </div>
+          <br>
+        <div class="relative  w-[1200px] overflow-hidden left-[50px]">
+          <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer">
+          
+          <div class="bg-slate-500 h-12 w-full  flex items-center">
+              
+             <h2 class="text-lg font-semibold text-white mx-2">
+              What Documents are needed to get a new connection?
+             </h2>
+          </div>
+          <!--Arrow sign-->
+          <div class="absolute top-3 right-3 text-white transform duration-500 rotate-0 peer-checked:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>              
+          </div>
+          <!--Content-->
+          <div class="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
+            <div class="p-30">
+                <p>In compliance with the instructions issued by the PTA and other law enforcing agencies, internet users are now liable to update the following information on their user profile:
+                  1:User’s name
+                  2:Address of place where connection is deployed
+                  3:User’s mobile number
+                  4:Picture of both sides of CNIC
+                  All users are requested to cooperate with the Maintenance Contractors on the above mentioned instructions to avoid any inconvenience</p>
+            </div>
+          </div>
+        </div>
+            <br>
+        <div class="relative  w-[1200px] overflow-hidden left-[50px]">
+          <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer">
+          
+          <div class="bg-slate-500 h-12 w-full  flex items-center">
+              
+             <h2 class="text-lg font-semibold text-white mx-2">
+              How Can  we get  a connection?
+             </h2>
+          </div>
+          <!--Arrow sign-->
+          <div class="absolute top-3 right-3 text-white transform duration-500 rotate-0 peer-checked:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>              
+          </div>
+          <!--Content-->
+          <div class="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
+            <div class="p-4">
+                <p>You can apply for the connection of National Broadband as an end user or an operator. To generate a request for the connection, please submit the online form available on www.nationalbroadband.pk</p>
+            </div>
+          </div>
+        </div>
+        <br>
+  
+        <div class="relative  w-[1200px] overflow-hidden left-[50px]">
+          <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer">
+          
+          <div class="bg-slate-500 h-12 w-full  flex items-center">
+              
+             <h2 class="text-lg font-semibold text-white mx-2">
+              What is a fair Usage Policy?
+             </h2>
+          </div>
+          <!--Arrow sign-->
+          <div class="absolute top-3 right-3 text-white transform duration-500 rotate-0 peer-checked:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>              
+          </div>
+          <!--Content-->
+          <div class="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
+            <div class="p-4">
+                <p> We want our users to enjoy surfing the internet and our Fair Usage Policy is there to make sure our users have the best experience possible. There might be some users who use so much data that it might adversely affect the network quality & deteriorate surfing experience for majority of our users and also for themselves. We also want to make sure everyone gets the experience from their chosen plan.
+  
+                  So to make sure everything is running smoothly, we continuously monitor the internet usage of our subscribers each month. A Fair Usage Policy given in Gigabytes (GB) of data applies on all packages.
+                  
+                  A small number of our users use internet services inappropriately, for example when sending or downloading very large files, sending and receiving video and other large files constantly, sharing services with neighborhood, re-distributing illegally. This means that service quality for all users is affected, making it slower for everyone to access the internet.
+                  The vast majority of our users use their service considerately. Even though only a small number of our users use the service inappropriately, their activity does greatly affect the service. Our Fair Use Policy manages inappropriate use and makes sure the service can be used fairly by everyone.
+                  
+                  Under the policy we have defined fair usage levels for unlimited data transfer plans and needless to mention, the usage levels are set above normal usage such that most users will not be affected by the Fair Usage Policy.
+                  
+                  While Fair Usage Policy applies to all our users, it’ll only actually affect those few users who make inappropriate use of our services.
+                  
+                  The impact of Fair Usage Policy on data transfer limits:
+                  
+                  Under Fair usage policy, data transfer limits of the plans are not changed; the data transfer limits remain as it is. (e.g. an unlimited plan will continue as an unlimited plan).
+                  
+                  Post consuming a certain amount of GB/MB on the plan you have, the speeds will be rationalized.
+                  
+                  The speed of the network also varies depending on the availability of the network during that time and the number of subscribers who are latched onto the network at that point of time.
+                  
+                  **********
+                  
+                  The Maintenance Contractor can be approached for information regarding your usage stats. If you are regularly breaching your FUP limit, all you need is an upgrade of the plan that suits your requirement. With the upgraded plan, you will be able to consume the extended quota.</p>
+            </div>
+          </div>
+        </div>
+               <br>
+        <div class="relative  w-[1200px] overflow-hidden left-[50px]">
+          <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer">
+          
+          <div class="bg-slate-500 h-12 w-full  flex items-center">
+              
+             <h2 class="text-lg font-semibold text-white mx-2">
+              What Are Packages?
+             </h2>
+          </div>
+          <!--Arrow sign-->
+          <div class="absolute top-3 right-3 text-white transform duration-500 rotate-0 peer-checked:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>              
+          </div>
+          <!--Content-->
+          <div class="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
+            <div class="p-4">
+               <p>We offer different packages for different cities. Please visit “Our Offerings” tab on our website. End user prices are set by our appointed local operators.</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="relative  w-[1200px] overflow-hidden left-[50px]">
+          <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer">
+          
+          <div class="bg-slate-500 h-12 w-full  flex items-center">
+              
+             <h2 class="text-lg font-semibold text-white mx-2">
+              What Happens after the Submission of an online request for a connection?
+             </h2>
+          </div>
+          <!--Arrow sign-->
+          <div class="absolute top-3 right-3 text-white transform duration-500 rotate-0 peer-checked:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>              
+          </div>
+          <!--Content-->
+          <div class="bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
+            <div class="p-4">
+               <p>Upon submission of your form, our teams will check the availability of our service in your mentioned area. Our authorized contractor will be notified about your connection request and will contact you within 24-48 hours.</p>
+            </div>
+          </div>
+        </div>
+  
+            <br>
+        <div class="relative  w-[1200px] overflow-hidden left-[50px]">
+          <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer">
+          
+          <div class="bg-slate-500 h-12 w-full  flex items-center">
+              
+             <h2 class="text-lg font-semibold text-white mx-2">
+              What Happens after the Submission of an online request for a connection?
+             </h2>
+          </div>
+          <!--Arrow sign-->
+          <div class="absolute top-3 right-3 text-white transform duration-500 rotate-0 peer-checked:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>              
+          </div>
+          <!--Content-->
+          <div class="bg-white  overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-40">
+            <div class="p-4">
+               <p>National Broadband (NBB) is an Internet Service Provider, which was created in response to the market demand for a focused service and a competitive alternative to traditional ISPs. As an end user, you can benefit from our consistent internet services through our assigned National Broadband dealers. We’ve invested heavily in our cutting edge infrastructure to ensure to be everyone’s preferred choice. As a partner, you can directly connect to our resilient buried fiber network for redistribution of internet connection to end users.
+   National Broadband is powered by CYBERNET, Pakistan’s leading Internet, Data and managed services provider. Since its inception in March 1996, CYBERNET has extended its operations to 70 cities of Pakistan. It has a robust buried fiber infrastructure which ensures uninterrupted services to all its customers. CYBERNET has maintained the tradition of dedication and service par excellence, which has been, and continues to be, its motto. .</p>
+            </div>
+          </div>
+        </div>
+      </Menu>
+      <br>
+      <hr class="bg-green-500">
+    <!--Contacts Us-->
+    
+    <nav class="bg-green-800">
+      <li><a>
+          <section id="home" class="relative">
+          </section>
+          <section  id="features"  >
+                  <div class="container py-2">
+                    <div class="text-center m-auto mb-20 md:w-1/2">
+                      <h1 class="text-slate-800 font-bold text-2xl hover:text-white cursor-pointer  px-12">Contacts</h1>
+                      <p class="text-gray-800 hover:text-white text-2xl">To get the NBB network experience, check your Address and Contact Your respective dealer</p>
+                    </div>
+                    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
+                           <!--Cardno1-->
+                     <div class="text-center py-24 px-20 rounded-2xl
+                     cursor-pointer  ease-in duration-200">
+                      <div class="font-bold">
+                          <img class="w-48" src="grocery.jpg">
+                          
+                     <p class="text-slate-900 hover:text-white">Ordering Services over the NBB network</p>
+                     </div>
+                     </div>                
+  <div class=" text-center py-28 px-24  cursor-pointer
+    ease-in duration-200">
+  <div class="font-bold ">
+ <img  class="w-44"src="pizza.jpg">
+  
+<p class="text-slate-800 hover:text-white">Installation And activation</p>
+<a href="https://www.facebook.com/">
+  <img class="w-12 my-2 mx-16" src="facebook.jpg">
+  <a href="https://web.whatsapp.com/">
+      <img class="w-10 mx-36 -my-12" src="whatsapp.jpg">
+      <a href="https://www.instagram.com/">
+          <img class="w-10 mx-50 my-2" src="instagram.jpg">
+</a>
+     </div>
+  </div> 
+   <div class=" text-center py-28 px-24  cursor-pointer
+    ease-in duration-200 ">
+<div class="font-bold">
+<img class="w-48"src="online.jpg">
+ <p class="text-slate-800 hover:text-white">Ongoing support and troubleshooting</p>
+</div>
+ </div> 
+</div>
+</div>
+</section>
+</a></li>
+<button onclick="scrollToTop()" class="text-red-500  fixed-0 ml-96 items-center mx-4 rounded-full justify-end bg-blue-400 text-center mx-6">Scroll to Top</button>
+</nav>
+
+
+
+
+    <script >
+      /*
+       const scrollBtn = document.querySelector('#scroll -to-top');
+        window.addEventListener('scroll',() =>{
+if(window.pageYOffset > 300){
+  scrollBtn.style.display ="block";
+} else{
+  scrollBtn.style.display = "none";
+}
+        });
+        scrollBtn.addEventListener('click',() => {
+        
+          window.scrollTo({
+            top:0,
+            behavior:"smooth"
+          });
+        });
+         */
+         function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Optional, smooth scrolling animation
+  });
+}
+
+            
+        //Mobile menu
+        document.getElementById("mobile-menu-button").addEventListener("click", function () {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+      this.classList.toggle("active");
+    });
+
+ 
+        currentSlideID = 1;
+       
+      //  sliderElement = document.getElementById('slider');
+      //  totalSlides = sliderElement.childElementCount;
+       function next(){
+      if(currentSlideID  < totalSlides){
+        currentSlideID++;
+        showSlide();
+           }
+       }
+
+       function prev(){
+    if(currentSlideID  > 1){
+        currentSlideID--;
+    showSlide();
+    }
+    
+       }
+        function showSlide(){
+      slides = document.getElementById('slider').getElementsByTagName('li')
+      for(let index = 0; index < totalSlides;index++){
+        const element = slides[index];
+        if(currentSlideID===index+1){
+            element.classList.remove('hidden')
+        } else {
+            element.classList.add('hidden')
+        }
+      }
+        }
+       
+         
+ // set the default active slide to the first one
+ let slideIndex = 1;
+        showSlide(slideIndex);
+
+        // change slide with the prev/next button
+        function moveSlide(moveStep) {
+            showSlide(slideIndex += moveStep);
+        }
+
+        // change slide with the dots
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            let i;
+            const slides = document.getElementsByClassName("slide");
+            const dots = document.getElementsByClassName('dot');
+            
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            // hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.add('hidden');
+            }
+
+            // remove active status from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('bg-yellow-500');
+                dots[i].classList.add('bg-green-600');
+            }
+
+            // show the active slide
+            slides[slideIndex - 1].classList.remove('hidden');
+
+            // highlight the active dot
+            dots[slideIndex - 1].classList.remove('bg-green-600');
+            dots[slideIndex - 1].classList.add('bg-yellow-500');
+        };
+
+  
+    </script>
+    
+</body>
+</html>
